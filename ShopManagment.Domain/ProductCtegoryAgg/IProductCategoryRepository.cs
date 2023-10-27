@@ -1,15 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Features.Domain;
+using ShopManagment.Application.Contracts.ProductCategory;
 
-namespace ShopManagment.Domain.ProductCtegoryAgg
+namespace ShopManagment.Domain.ProductCtegoryAgg;
+
+public interface IProductCategoryRepository : IRepository<long, ProductCategory>
 {
-    public interface IProductCategoryRepository
-    {
-        Void Create(ProductCategory entity);
-        ProductCategory Get(long id);
-        List<ProductCategory> GetAll();
-    }
+    EditProductCategory GetDetails(long id);
+    List<ProductCategoryViewModel> Search(ProductCategorySearchModel searchModel);
+
+    //comment down list becuse use a 'IRepository'
+    //void Create(ProductCategory entity);
+    //ProductCategory Get(long id);
+    //List<ProductCategory> GetAll();
+    //bool Exists(Expression<Func<ProductCategory, bool>> expression);
+    //void Save();
 }
