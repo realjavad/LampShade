@@ -8,8 +8,8 @@ namespace Features.Application
 {
     public class OperationResult
     {
-        private bool IsSuccess { get; set; }
-        private string Message { get; set; }
+        public bool IsSuccess { get; set; }
+        public string Message { get; set; }
         public OperationResult()
         {
             IsSuccess = false;
