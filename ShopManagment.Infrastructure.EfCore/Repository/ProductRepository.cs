@@ -49,7 +49,9 @@ namespace ShopManagment.Infrastructure.EfCore.Repository
                 Picture = x.Picture,
                 UnitPrice = x.UnitPrice,
                 Category = x.Category.Name,
-                Code = x.Code
+                CategoryId = x.CategoryId,
+                Code = x.Code,
+                IsStock = x.IsINStock
             });
 
             if (!string.IsNullOrWhiteSpace(searchModel.Name))
@@ -58,8 +60,11 @@ namespace ShopManagment.Infrastructure.EfCore.Repository
             if (!string.IsNullOrWhiteSpace(searchModel.Code))
                 query = query.Where(x => x.Code.Contains(searchModel.Code));
 
-            if (!string.IsNullOrWhiteSpace(searchModel.Category))
-                query = query.Where(x => x.Category.Contains(searchModel.Category));
+            //if (!string.IsNullOrWhiteSpace(searchModel.Category))
+            //    query = query.Where(x => x.Category.Contains(searchModel.Category));
+
+            if (searchModel.CategoryId != 0)
+                query = query.Where(x => x.CategoryId == searchModel.CategoryId);
             
             return query.OrderByDescending(x=> x.Id).ToList();
         }

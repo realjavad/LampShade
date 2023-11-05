@@ -9,6 +9,6 @@ namespace Features.Application
     public class ApplicationMessage
     {
         public const string DuplicatedRecord = "رکورد تکراری وجود ندارد. لطفا مجدد تلاش بفرمایید.";
-        public const string RecordNotFound = "اطلاعات درخواست شده یافت نشد. لطفا مجدد تلاش بفمایید."
+        public const string RecordNotFound = "اطلاعات درخواست شده یافت نشد. لطفا مجدد تلاش بفمایید.";
     }
 }
