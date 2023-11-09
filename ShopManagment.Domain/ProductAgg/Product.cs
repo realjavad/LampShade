@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Features.Domain;
 using ShopManagment.Domain.ProductCtegoryAgg;
+using ShopManagment.Domain.ProductPictureAgg;
 
 namespace ShopManagment.Domain.Product
 {
@@ -24,9 +25,11 @@ namespace ShopManagment.Domain.Product
         public string MetaDescription { get; private set; }
         public long CategoryId { get; private set; }
         public ProductCategory Category  { get; private set; }
+        public List<ProductPicture> ProductPictures { get; private set; }
 
         protected Product()
         {
+            ProductPictures = new List<ProductPicture>();
         }
 
         public Product(string name, string code, double unitPrice, string shortDescription, string description, string picture, string pictureAlt, string pictureTitle, string slug, string keywords, string metaDescription, long categoryId)

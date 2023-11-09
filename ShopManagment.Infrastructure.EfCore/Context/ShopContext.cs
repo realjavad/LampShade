@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using ShopManagment.Domain.Product;
 using ShopManagment.Domain.ProductCtegoryAgg;
+using ShopManagment.Domain.ProductPictureAgg;
 using ShopManagment.Infrastructure.EfCore.Mapping;
 
 namespace ShopManagment.Infrastructure.EfCore.Context
@@ -14,6 +15,7 @@ namespace ShopManagment.Infrastructure.EfCore.Context
     {
         public DbSet<ProductCategory> ProductCategories { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<ProductPicture> ProductPictures { get; set; }
         public ShopContext(DbContextOptions<ShopContext> options) : base(options)
         {
         }
