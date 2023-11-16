@@ -26,7 +26,6 @@ namespace ShopManagment.Infrastructure.EfCore.Repository
                 Id = x.Id,
                 Picture = x.Picture,
                 PictureAlt = x.PictureAlt,
-                PictureLink = x.PictureLink,
                 PictureTitle = x.PictureTitle,
                 ProductId = x.ProductId
             }).FirstOrDefault(x => x.Id == id);
@@ -40,7 +39,8 @@ namespace ShopManagment.Infrastructure.EfCore.Repository
                 Picture = x.Picture,
                 CreationDate = x.CreationDate.ToString(),
                 Product = x.Product.Name,
-                ProductId = x.ProductId
+                ProductId = x.ProductId,
+                IsRemove = x.IsRemove
             });
 
             if (searchModel.ProductId != 0)

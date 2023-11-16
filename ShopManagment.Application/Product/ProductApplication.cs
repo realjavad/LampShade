@@ -82,5 +82,10 @@ namespace ShopManagment.Application.Product
         {
             return _repository.Search(command);
         }
+
+        public List<ProductViewModel> GetProducts()
+        {
+            return _repository.GetProducts();
+        }
     }
 }

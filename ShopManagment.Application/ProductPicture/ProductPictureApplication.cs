@@ -24,7 +24,7 @@ namespace ShopManagment.Application.ProductPicture
                 return opration.Failed(ApplicationMessage.DuplicatedRecord);
 
             var picture = new Domain.ProductPictureAgg.ProductPicture(command.ProductId, command.Picture,
-                command.PictureAlt, command.PictureTitle, command.PictureLink);
+                command.PictureAlt, command.PictureTitle);
             _repository.Create(picture);
             _repository.Save();
             return opration.Success(ApplicationMessage.SuccessMessage);
@@ -43,7 +43,7 @@ namespace ShopManagment.Application.ProductPicture
                 return operation.Failed(ApplicationMessage.DuplicatedRecord);
 
             picture.Edit(command.ProductId, command.Picture,
-                command.PictureAlt, command.PictureTitle, command.PictureLink);
+                command.PictureAlt, command.PictureTitle);
             _repository.Save();
             return operation.Success(ApplicationMessage.SuccessMessage);
         }
