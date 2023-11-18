@@ -361,3 +361,9 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+#Because of correct routing in two different systems
+launchSettings.json
+
+#just for laptop acc
+20231117181336_initdatabaseinlaptop.cs
