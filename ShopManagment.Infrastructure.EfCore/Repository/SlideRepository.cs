@@ -28,7 +28,8 @@ namespace ShopManagment.Infrastructure.EfCore.Repository
                 Heading = x.Heading,
                 Title = x.Title,
                 CreationDate = x.CreationDate.ToString(),
-                IsRemove = x.IsRemove
+                IsRemove = x.IsRemove,
+                Link = x.Link
             }).ToList();
         }
 
@@ -43,7 +44,8 @@ namespace ShopManagment.Infrastructure.EfCore.Repository
                 Title = x.Title,
                 Heading = x.Heading,
                 Text = x.Text,
-                BtnText = x.BtnText
+                BtnText = x.BtnText,
+                Link = x.Link
             }).FirstOrDefault(x => x.Id == id);
         }
     }

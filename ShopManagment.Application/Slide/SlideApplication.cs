@@ -22,7 +22,7 @@ namespace ShopManagment.Application.Slide
         {
             var opration = new OperationResult();
             var slide = new Domain.SlideAgg.Slide(command.Picture, command.PictureTitle, command.PictureAlt,
-                command.Heading, command.Title, command.Text, command.BtnText);
+                command.Heading, command.Title, command.Text, command.BtnText,command.Link);
             _repository.Create(slide);
             _repository.Save();
             return opration.Success();
@@ -37,7 +37,7 @@ namespace ShopManagment.Application.Slide
                 return opration.Failed(ApplicationMessage.RecordNotFound);
             }
             result.Edit(command.Picture, command.PictureTitle, command.PictureAlt,
-                command.Heading, command.Title, command.Text, command.BtnText);
+                command.Heading, command.Title, command.Text, command.BtnText, command.Link);
             _repository.Save();
             return opration.Success();
         }

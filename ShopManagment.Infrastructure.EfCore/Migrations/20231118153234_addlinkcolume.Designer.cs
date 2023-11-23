@@ -12,8 +12,8 @@ using ShopManagment.Infrastructure.EfCore.Context;
 namespace ShopManagment.Infrastructure.EfCore.Migrations
 {
     [DbContext(typeof(ShopContext))]
-    [Migration("20231117181336_initdatabaseinlaptop")]
-    partial class initdatabaseinlaptop
+    [Migration("20231118153234_addlinkcolume")]
+    partial class addlinkcolume
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -215,6 +215,10 @@ namespace ShopManagment.Infrastructure.EfCore.Migrations
 
                     b.Property<bool>("IsRemove")
                         .HasColumnType("bit");
+
+                    b.Property<string>("Link")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Picture")
                         .IsRequired()

@@ -19,7 +19,8 @@ public class SlideQuery : ISlideQuery
             Picture = x.Picture,
             PictureAlt = x.PictureAlt,
             PictureTitle = x.PictureTitle,
-            Text = x.Text
+            Text = x.Text,
+            Link = x.Link
         }).ToList();
     }
 }

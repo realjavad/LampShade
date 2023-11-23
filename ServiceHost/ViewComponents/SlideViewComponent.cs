@@ -3,17 +3,17 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ServiceHost.ViewComponents
 {
-    public class SlideViewComponents : ViewComponent
+    public class SlideViewComponent : ViewComponent
     {
         private readonly ISlideQuery _slidequery;
-        public SlideViewComponents(ISlideQuery slidequery)
+        public SlideViewComponent(ISlideQuery slidequery)
         {
             _slidequery = slidequery;
         }
         public IViewComponentResult Invoke()
         {
-            var slide = _slidequery.GetSlides();
-            return View(slide);
+            var Slide = _slidequery.GetSlides();
+            return View(Slide);
         }
     }
 }

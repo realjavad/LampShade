@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Query\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\ShopManagment.Infrastructure.EfCore\ShopManagment.Infrastructure.EfCore.csproj" />
   </ItemGroup>
 
